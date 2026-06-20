@@ -4,11 +4,15 @@
 
 This senior capstone thesis project is an electromechanical prototype designed to maximize photovoltaic (PV) yield through dynamic, dual-axis solar tracking. Moving beyond standard timer-based or threshold-based tracking, this system utilizes a custom Fuzzy Logic Controller (FLC) to process multi-directional light intensity data, smoothly driving azimuth and elevation actuators. Theoretical modeling and empirical testing indicated an estimated 35–40% increase in power capture efficiency compared to static panel configurations, directly contributing to grid-scale green energy optimization strategies.
 
+![Project Prototype](project_prototype1.jpg)
+![Project Prototype](project_prototype2.jpg)
+![Simulink Block Diagram](simulink_blockdiagram.png)
+
 **System Architecture**
 
 The system employs a closed-loop control architecture, continuously minimizing the differential error between opposing light sensors.
 
-```
+```mermaid
 graph TD
     subgraph Input_Arrays [Input Arrays]
         LDR_TL[Top Left LDR] -->|Analog| ADC
