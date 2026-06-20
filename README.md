@@ -10,20 +10,18 @@ The system employs a closed-loop control architecture, continuously minimizing t
 
 ```
 graph TD
-    subgraph Input Arrays
+    subgraph Input_Arrays [Input Arrays]
         LDR_TL[Top Left LDR] -->|Analog| ADC
         LDR_TR[Top Right LDR] -->|Analog| ADC
         LDR_BL[Bottom Left LDR] -->|Analog| ADC
         LDR_BR[Bottom Right LDR] -->|Analog| ADC
     end
-
     subgraph Processing [Arduino MEGA 2560]
-        ADC[10-bit ADC] --> Calc[Calculate Error: <br> Ve1 = Vsol - Vsag <br> Ve2 = Vust - Valt]
-        Calc --> FLC[Fuzzy Logic Controller <br> Fuzzification -> Rule Base -> Defuzzification]
+        ADC[10-bit ADC] --> Calc["Calculate Error: <br/> Ve1 = Vsol - Vsag <br/> Ve2 = Vust - Valt"]
+        Calc --> FLC["Fuzzy Logic Controller <br/> Fuzzification to Rule Base to Defuzzification"]
         FLC --> PWM_Gen[PWM Signal Generator]
     end
-
-    subgraph Actuation & Output
+    subgraph Actuation_Output [Actuation & Output]
         PWM_Gen -->|PWM| Servo_Az[Azimuth Servo Motor]
         PWM_Gen -->|PWM| Servo_El[Elevation Servo Motor]
         Servo_Az --> PV[Photovoltaic Panel Gimbal]
