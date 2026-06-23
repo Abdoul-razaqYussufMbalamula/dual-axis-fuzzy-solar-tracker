@@ -71,3 +71,12 @@ To evolve this prototype into a viable commercial-grade power system, the follow
 * **Hybrid Tracking Algorithm:** Integrating a Real-Time Clock (RTC) and GPS module to calculate astronomical solar positioning. The system would use math to track the sun during cloudy conditions and seamlessly switch to LDR Fuzzy Logic for fine-tuning during clear skies.
 * **Sensor Fusion:** Incorporating DHT22 (Temperature/Humidity) sensors to monitor PV thermal degradation, as solar panel efficiency drops under extreme heat.
 * **Telemetry & IoT Integration:** Upgrading the MCU to an ESP32 to push live voltage generation data, motor states, and telemetry to a cloud dashboard via Wi-Fi/MQTT for remote industrial monitoring.
+
+## Team & Contributors
+
+This senior capstone thesis was successfully developed and presented collaboratively over two semesters by a four-person engineering team. I want to sincerely thank my project partners for their dedication and specialized expertise:
+
+* **[Abdoul-razaq Yussuf Mbalamula]** - Motor Control & Hardware Integration *(Sensor array implementation and electromechanical actuator synchronization)* - ![LinkedIn Profile](www.linkedin.com/in/abdoul-razaq-yussuf-mbalamula-969274270)
+* **[Ebuka Uzoegbo]** - Mechanical Design & Electrical Routing *(3D CAD fabrication and physical wiring architecture)* - ![Github Profile](@scientist-supreme)
+* **[Mert Can Çevik]** - Control Theory & Mathematical Modeling *(Simulink modeling and Fuzzy Logic algorithmic design)* - ![LinkedIn Profile](https://www.linkedin.com/in/mertccevik/?locale=en)
+* **[Victor Muya]** - Embedded Software Engineering *(C++ firmware implementation and MCU deployment)* - ![LinkedIn Profile](https://www.linkedin.com/in/vmuya/)
